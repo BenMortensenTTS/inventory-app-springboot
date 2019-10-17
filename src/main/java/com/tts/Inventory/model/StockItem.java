@@ -13,21 +13,21 @@ public class StockItem {
 	
 	private Long id;
 	private Integer amountInStock;
+	private Integer idealStock;
 	private Integer alertAt;
 	private String itemName;
-	private String emailAddress;
 	private String room;
 	
 	
 	public StockItem() {}
 
 
-	public StockItem(Integer amountInStock, Integer alertAt, String itemName, String emailAddress, String room) {
+	public StockItem(Integer amountInStock, Integer idealStock, Integer alertAt, String itemName, String room) {
 		super();
 		this.amountInStock = amountInStock;
+		this.idealStock = idealStock;
 		this.alertAt = alertAt;
 		this.itemName = itemName;
-		this.emailAddress = emailAddress;
 		this.room = room;
 	}
 
@@ -39,6 +39,16 @@ public class StockItem {
 
 	public void setAmountInStock(Integer amountInStock) {
 		this.amountInStock = amountInStock;
+	}
+
+
+	public Integer getIdealStock() {
+		return idealStock;
+	}
+
+
+	public void setIdealStock(Integer idealStock) {
+		this.idealStock = idealStock;
 	}
 
 
@@ -62,16 +72,6 @@ public class StockItem {
 	}
 
 
-	public String getEmailAddress() {
-		return emailAddress;
-	}
-
-
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
-
-
 	public String getRoom() {
 		return room;
 	}
@@ -89,8 +89,9 @@ public class StockItem {
 
 	@Override
 	public String toString() {
-		return "StockItem [amountInStock=" + amountInStock + ", alertAt=" + alertAt + ", itemName=" + itemName
-				+ ", emailAddress=" + emailAddress + ", room=" + room + "]";
+		return "StockItem [amountInStock=" + amountInStock + ", idealStock=" + idealStock + ", alertAt=" + alertAt
+				+ ", itemName=" + itemName + ", room=" + room + "]";
 	}
+
+
 }
-	

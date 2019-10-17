@@ -3,6 +3,8 @@ package com.tts.Inventory.service;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
 import com.tts.Inventory.model.StockItem;
@@ -39,11 +41,13 @@ public class StockItemServiceImpl implements StockItemServiceInt {
 		StockItem currentStockItem = stockItemRepository.findStockItemById(id);
 		currentStockItem.setAlertAt(stockItemChanges.getAlertAt());
 		currentStockItem.setAmountInStock(stockItemChanges.getAmountInStock());
-		currentStockItem.setEmailAddress(stockItemChanges.getEmailAddress());
+		currentStockItem.setIdealStock(stockItemChanges.getIdealStock());
 		currentStockItem.setItemName(stockItemChanges.getItemName());
 		currentStockItem.setRoom(stockItemChanges.getRoom());
 		stockItemRepository.save(currentStockItem);
 	}
+	
+	
 
 	
 	
