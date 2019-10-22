@@ -13,4 +13,5 @@ public interface StockItemRepository extends CrudRepository<StockItem, Long> {
 	public ArrayList<StockItem> findAll();
 
 	public StockItem findStockItemById(Long id);
+	
 }
