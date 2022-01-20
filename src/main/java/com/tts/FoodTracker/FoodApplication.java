@@ -1,13 +1,13 @@
-package com.tts.Inventory;
+package com.tts.FoodTracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InventoryApplication {
+public class FoodApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InventoryApplication.class, args);
+		SpringApplication.run(FoodApplication.class, args);
 	}
 
 }
